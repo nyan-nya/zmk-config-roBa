@@ -81,12 +81,8 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-
-            // 追加: スクロールのタップ時間を設定 (20ms)
-
             tap-ms = <20>;
         };
-        sensor-bidings = <&scroll_up_down>;
     };
 
     keymap {
@@ -99,7 +95,6 @@
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N                       &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 INT_KATAKANAHIRAGANA                             &kp ENTER
             >;
-
             sensor-bindings = <&scroll_up_down>;
         };
 
