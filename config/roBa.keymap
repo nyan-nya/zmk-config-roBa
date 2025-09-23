@@ -12,7 +12,7 @@
 &trackball {
     automouse-layer = <4>;
     scroll-layers = <5>;
-
+arrows{
     layers = <3>;
     bindings =
     <&kp RIGHT_ARROW>,
@@ -73,7 +73,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
-    scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
