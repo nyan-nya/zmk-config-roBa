@@ -86,6 +86,7 @@
 
             tap-ms = <20>;
         };
+        sensor-bidings = <&scroll_up_down>;
     };
 
     keymap {
