@@ -93,7 +93,7 @@
 &trans      &trans              &trans            &trans         &trans  &trans            &trans  &trans                                        &trans
             >;
 
-            sensor-bindings = <&encoder_msc_up_down>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         number {
