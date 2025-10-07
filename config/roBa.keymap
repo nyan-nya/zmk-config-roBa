@@ -66,10 +66,10 @@
 
         default_layer_mac {
             bindings = <
-&kp Q           &kp W         &kp E             &kp R                    &kp T                                           &kp Y             &kp U  &kp I      &kp O    &kp P
-&mt LCTRL A     &kp S         &kp D             &kp F                    &kp G        &mkp MCLK           &kp SEMICOLON  &kp H             &kp J  &kp K      &kp L    &kp MINUS
-&kp Z           &kp X         &kp C             &kp V                    &lt 4 B      &kp TAB             &kp SLASH      &kp N             &kp M  &kp COMMA  &kp DOT  &kp EQUAL
-&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mt LEFT_GUI LANGUAGE_2  &lt 2 SPACE  &kp INT_HENKAN      &kp BACKSPACE  &lt 3 LANGUAGE_1                             &kp ENTER
+&kp Q           &kp W         &kp E         &kp R                 &kp T                                           &kp Y             &kp U  &kp I      &kp O    &kp P
+&mt LCTRL A     &kp S         &kp D         &kp F                 &kp G        &mkp MCLK           &kp SEMICOLON  &kp H             &kp J  &kp K      &kp L    &kp MINUS
+&kp Z           &kp X         &kp C         &kp V                 &lt 4 B      &kp TAB             &kp SLASH      &kp N             &kp M  &kp COMMA  &kp DOT  &kp EQUAL
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &mt LCTRL LANGUAGE_2  &lt 2 SPACE  &kp INT_HENKAN      &kp BACKSPACE  &lt 3 LANGUAGE_1                             &kp ENTER
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
