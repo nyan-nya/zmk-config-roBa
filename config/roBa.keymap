@@ -117,10 +117,10 @@
 
         symbol {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans  &kp AMPERSAND  &kp STAR     &kp GRAVE  &kp BACKSLASH                      &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans  &trans
+&trans  &kp DOLLAR     &kp PERCENT  &kp CARET  &kp PIPE       &trans      &trans  &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans  &trans
+&trans  &kp EXCL       &kp AT       &kp HASH   &trans         &trans      &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans
+&trans  &trans         &trans       &trans     &trans         &trans      &trans  &trans                                                       &trans
             >;
         };
     };
