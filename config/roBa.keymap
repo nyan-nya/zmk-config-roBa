@@ -23,7 +23,7 @@
             <&kp UP_ARROW>,
             <&kp DOWN_ARROW>;
 
-        tick = <50>;
+        tick = <5>;
         wait-ms = <100>;
         tap-ms = <5>;
     };
