@@ -12,18 +12,18 @@
     automouse-layer = <4>;
     scroll-layers = <5>;
 
-    // arrows {
-    //     layers = <3>;
-    //     bindings =
-    //         <&kp RIGHT_ARROW>,
-    //         <&kp LEFT_ARROW>,
-    //         <&kp UP_ARROW>,
-    //         <&kp DOWN_ARROW>;
+     arrows {
+         layers = <3>;
+         bindings =
+             <&kp RIGHT_ARROW>,
+             <&kp LEFT_ARROW>,
+             <&kp UP_ARROW>,
+             <&kp DOWN_ARROW>;
 
-    //     tick = <10>;
-    //     wait-ms = <5>;
-    //     tap-ms = <5>;
-    // };
+         tick = <10>;
+         wait-ms = <5>;
+         tap-ms = <5>;
+     };
 };
 
 / {
@@ -74,6 +74,12 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+        encoder_msc_down_up: encoder_msc_down_up {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENCODER_MSC_DOWN_UP";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            tap-ms = <20>;
     };
 
     keymap {
@@ -86,7 +92,7 @@
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
             >;
-
+            sensor-bindings = <&encoder_msc_down_up>;
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
