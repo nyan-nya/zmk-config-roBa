@@ -95,7 +95,6 @@
 &kp Z           &kp X         &kp C         &kp V                 &lt 2 B      &kp TAB                            &kp SLASH      &kp N             &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_WIN  &mt LCTRL LANGUAGE_1  &lt 1 SPACE  &lt_to_layer_0 5 INT_MUHENKAN      &kp BACKSPACE  &lt 3 LANGUAGE_2                             &kp ENTER
             >;
-
             sensor-bindings = <&encoder_msc_up_up>;
         };
 
@@ -106,7 +105,6 @@
 &none   &kp F1  &kp F2  &kp F3  &kp F12  &none       &none   &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none
 &trans  &trans  &trans  &trans  &trans   &trans      &trans  &trans                                                              &none
             >;
-
             sensor-bindings = <&inc_dec_kp LG(LC(RIGHT)) LC(LG(LEFT))>;
         };
 
