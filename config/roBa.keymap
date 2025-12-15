@@ -95,8 +95,7 @@
 &kp Z           &kp X         &kp C         &kp V                   &lt 2 B      &kp TAB                            &kp SLASH      &kp N             &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_WIN  &mt LCTRL INT_MUHENKAN  &lt 1 SPACE  &lt_to_layer_0 5 INT_MUHENKAN      &kp BACKSPACE  &lt 3 LANGUAGE_4                             &kp ENTER
             >;
-
-            sensor-bindings = <&encoder_msc_down_up>;
+            sensor-bindings = <&encoder_msc_up_up>;
         };
 
         NUM {
