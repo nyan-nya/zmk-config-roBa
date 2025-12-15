@@ -12,18 +12,18 @@
     automouse-layer = <4>;
     scroll-layers = <5>;
 
-     arrows {
-         layers = <3>;
-         bindings =
-             <&kp RIGHT_ARROW>,
-             <&kp LEFT_ARROW>,
-             <&kp UP_ARROW>,
-             <&kp DOWN_ARROW>;
+    arrows {
+        layers = <3>;
+        bindings =
+            <&kp RIGHT_ARROW>,
+            <&kp LEFT_ARROW>,
+            <&kp UP_ARROW>,
+            <&kp DOWN_ARROW>;
 
-         tick = <10>;
-         wait-ms = <5>;
-         tap-ms = <5>;
-     };
+        tick = <10>;
+        wait-ms = <5>;
+        tap-ms = <5>;
+    };
 };
 
 / {
@@ -74,11 +74,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
         encoder_msc_down_up: encoder_msc_down_up {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MSC_DOWN_UP";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
             tap-ms = <20>;
         };
     };
@@ -88,11 +90,12 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
+&kp Q           &kp W         &kp E         &kp R                          &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
+&kp A           &kp S         &kp D         &kp F                          &kp G        &mkp MB3                           &kp LG(TAB)    &kp H        &kp J  &kp K      &kp L    &kp MINUS
+&kp Z           &kp X         &kp C         &kp V                          &kp B        &kp TAB                            &kp SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_WIN  &lt_to_layer_0 6 INT_MUHENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 3 LANG2                             &kp ENTER
             >;
+
             sensor-bindings = <&encoder_msc_down_up>;
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
@@ -113,17 +116,19 @@
 &mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
 &trans                      &trans           &trans           &trans           &trans        &trans                       &trans          &trans                                                                     &kp PIPE
             >;
+
+            sensor-bindings = <&inc_dec_kp LG(LC(RIGHT)) LC(LG(LEFT))>;
         };
 
         ARROW {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans  &trans  &trans  &trans  &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                          &trans
+&kp ESCAPE      &kp LC(LS(TAB))     &none             &kp LC(TAB)    &trans                      &trans  &trans    &trans          &trans     &trans
+&kp HOME        &none               &kp LC(UP_ARROW)  &none          &none   &trans      &trans  &trans  &kp HOME  &kp UP_ARROW    &kp END    &trans
+&kp LEFT_SHIFT  &kp LC(LEFT_ARROW)  &kp LC(DOWN)      &kp LC(RIGHT)  &trans  &trans      &trans  &trans  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &trans
+&trans          &trans              &trans            &trans         &trans  &trans      &trans  &trans                                       &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+            sensor-bindings = <&inc_dec_kp LC(TAB) LC(LS(TAB))>;
         };
 
         MOUSE {
