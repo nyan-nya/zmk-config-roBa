@@ -90,10 +90,10 @@
 
         default_layer {
             bindings = <
-&kp Q           &kp W         &kp E         &kp R                   &kp T                                                          &kp Y        &kp U  &lt 4 I    &kp O    &kp P
+&kp Q           &kp W         &kp E         &kp R                   &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
 &kp A           &kp S         &kp D         &kp F                   &kp G        &mkp MB3                           &kp LG(TAB)    &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&kp Z           &kp X         &kp C         &kp V                   &kp B        &kp TAB                            &kp SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_WIN  &mt LCTRL INT_MUHENKAN  &lt 1 SPACE  &lt_to_layer_0 2 INT_MUHENKAN      &kp BACKSPACE  &lt 2 LANG2                             &kp ENTER
+&kp Z           &kp X         &kp C         &kp V                   &lt 2 B      &kp TAB                            &kp SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_WIN  &mt LCTRL INT_MUHENKAN  &lt 1 SPACE  &lt_to_layer_0 5 INT_MUHENKAN      &kp BACKSPACE  &lt 3 LANG2                             &kp ENTER
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -109,6 +109,15 @@
             >;
 
             sensor-bindings = <&inc_dec_kp LG(LC(RIGHT)) LC(LG(LEFT))>;
+        };
+
+        bluetooth {
+            bindings = <
+&trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
+&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+            >;
         };
 
         ARROW {
@@ -146,15 +155,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
 &trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
 &trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                          &kp F12
-            >;
-        };
-
-        symbols {
-            bindings = <
-&trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
             >;
         };
     };
